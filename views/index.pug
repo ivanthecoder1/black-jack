@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  h1= BlackJack
+
+  #score
+        h3 Wins 
+        h5#dealer-score Dealer's wins: 0
+        h5#player-score Player's wins: 0
+
+  #container
+      //- Dealer's hand and points
+      #dealer-container
+        div#dealer-hand Dealer Hand
+      
+        p#dealerPoints Dealer Points: 0 
+
+      #Deck
+        p Deck
+
+      //- Player's hand, points, and buttons
+      #player-container
+
+        //- button to stay or hit
+        div#button-container
+          .ui.orange.button#Hit 
+            | Hit me 
+          br
+          .ui.orange.button#Stay 
+            | Stay
+          br
+
+
+        div#player-hand Player Hand
+        p#playerPoints Player Points: 0 
+
+  //- The moment the main HTML page loads, a modal appears asking if the player wishes to play. 
+  //- Under that, there is a green button labeled "Deal" which will start the game.
+  .ui.modal#start
+    div Do you wish to play blackjack?
+
+    .ui.green.button#Deal 
+      | Deal 
+    br
+
+
+  
+  //- The game over modal will display who won, and a button asking if the player wishes to play again. 
+  //- If this button is pressed. The cards, score, etc are cleared, the modal goes away BUT the scoring tally in the 
+  //- upper lefthand side is updated to reflect who won the last round. The player can now play the game again.
+  .ui.modal#gameOver
+    p#result Result: 
+
+    .ui.red.button#playAgain 
+      | Play again? 
+    br
