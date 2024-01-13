@@ -3,7 +3,7 @@
 A simple black jack game
 
 ## Features
-- Has all the functionalitie of a typical black jack game
+- Has all the functionalities of a typical black jack game
 - Wins and losses are stored
 - **Tech Stack:** Javascript, HTML/CSS, Pug, MongoDB, Node.js, Express.js
 
